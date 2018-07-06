@@ -14,18 +14,15 @@ namespace WordSearch02.Controllers
         public ActionResult WordCounterForm()
         {
             return View();
-            //return new EmptyResult();
         }
 
-        [HttpPost("counter-results")]
-        public ActionResult WordCounterResults(string targetWord, string phrase)
+        [HttpPost("/counter-form/counter-results")]
+        public ActionResult WordCounterResults(string word, string phrase)
         {
             RepeatCounter counter = new RepeatCounter();
-            counter.CheckSplitPhrase(targetWord, phrase);
-            counter.GetResult();
+            counter.RunCounter(word, phrase);
 
             return View(counter);
-            //return new EmptyResult();
         }
     }
 }
