@@ -1,10 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using WordSearch02.Models;
+
 namespace WordSearch02.Controllers
 {
-    public class WordCounterController
+    public class WordCounterController : Controller
     {
-        public WordCounterController()
+        [HttpGet("/counter-form")]
+        public ActionResult WordCounterForm()
         {
+            return View();
         }
     }
 }

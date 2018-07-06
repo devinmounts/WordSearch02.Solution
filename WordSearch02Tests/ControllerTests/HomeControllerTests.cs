@@ -10,10 +10,7 @@ namespace WordSearch02Tests.ControllerTests
     [TestClass]
     public class HomeControllerTests 
     {
-        //public void Dispose()
-        //{
-        //    RepeatCounter.ClearAll();
-        //}
+ 
         [TestMethod]
         public void Splash_ReturnsCorrectView_True()
         {
