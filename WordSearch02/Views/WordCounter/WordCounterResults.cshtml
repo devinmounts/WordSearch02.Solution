@@ -12,11 +12,13 @@
     </div>
     <div class="grid-container">
         <div class="grid-item fancy-shadow">Searched Word</div>
+        @*<div class="grid-item fancy-shadow">Searched Phrase</div>*@
         <div class="grid-item fancy-shadow">Result</div>
-    
-        @foreach(var search in Model)
-        {
+
+        @foreach (var search in Model)
+    {
         <div class="grid-item">@search.GetTargetWord()</div>
+        @*<div class="grid-item">@search.GetComparePhrase()</div>*@
         <div class="grid-item">@search.GetResult()</div>
         }
     </div>
