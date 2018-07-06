@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSearch02", "WordSearch02\WordSearch02.csproj", "{FFD9B8FB-459F-4520-8F92-C19E7198FDA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordSearch02Tests", "WordSearch02Tests\WordSearch02Tests.csproj", "{D0ADD0FF-C177-487A-9917-BD3E14696877}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFD9B8FB-459F-4520-8F92-C19E7198FDA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD9B8FB-459F-4520-8F92-C19E7198FDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD9B8FB-459F-4520-8F92-C19E7198FDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD9B8FB-459F-4520-8F92-C19E7198FDA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0ADD0FF-C177-487A-9917-BD3E14696877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0ADD0FF-C177-487A-9917-BD3E14696877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0ADD0FF-C177-487A-9917-BD3E14696877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0ADD0FF-C177-487A-9917-BD3E14696877}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
