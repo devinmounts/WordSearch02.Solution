@@ -19,9 +19,11 @@ namespace WordSearch02Tests.ControllerTests
         }
 
         [TestMethod]
-        public void WordCounterForm_ReturnsCorrectView_True()
+        public void WordCounterResult_ReturnsCorrectView_True()
         {
-            
+            WordCounterController controller = new WordCounterController();
+            ActionResult resultsView = controller.WordCounterResults("cat", "the cAt");
+            Assert.IsInstanceOfType(resultsView, typeof(ViewResult));
         }
     }
 }

@@ -24,8 +24,7 @@ namespace WordSearch02.Controllers
             counter.CheckSplitPhrase(targetWord, phrase);
             counter.GetResult();
 
-            //return View(counter);
-            return new EmptyResult();
+            return View(counter);
         }
     }
 }
