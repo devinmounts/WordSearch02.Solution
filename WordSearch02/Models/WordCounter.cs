@@ -9,6 +9,7 @@ namespace WordSearch02.Models
         private int _result;
         private string _targetWord;
         private string[] _comparePhrase;
+        private static List<RepeatCounter> _searchedWords = new List<RepeatCounter> { };
 
         //Create Default and Overloaded Constructors.
         public RepeatCounter()
@@ -48,6 +49,16 @@ namespace WordSearch02.Models
         public string[] GetComparePhrase()
         {
             return _comparePhrase;
+        }
+
+        public void SaveWord(string word)
+        {
+            _searchedWords.Add(this);
+        }
+
+        public static List<RepeatCounter> GetAll()
+        {
+            return _searchedWords;
         }
 
 
