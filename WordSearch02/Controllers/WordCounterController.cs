@@ -16,5 +16,15 @@ namespace WordSearch02.Controllers
             return View();
             //return new EmptyResult();
         }
+
+        [HttpPost("counter-results")]
+        public ActionResult WordCounterResults(string targetWord, string phrase)
+        {
+            RepeatCounter counter = new RepeatCounter();
+            counter.CheckSplitPhrase(targetWord, phrase);
+            counter.GetResult();
+
+            return View(counter);
+        }
     }
 }
