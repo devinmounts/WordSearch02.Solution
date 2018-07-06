@@ -14,6 +14,7 @@ namespace WordSearch02.Controllers
         public ActionResult WordCounterForm()
         {
             return View();
+            //return new EmptyResult();
         }
     }
 }

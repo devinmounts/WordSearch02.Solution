@@ -11,11 +11,12 @@ namespace WordSearch02Tests.ControllerTests
     public class WordCounterControllerTests
     {
         [TestMethod]
-        public void WordCounterForm_ReturnsCorrectView_True()
+        public void Splash_ReturnsCorrectView_True()
         {
             WordCounterController controller = new WordCounterController();
-            WordCounterController wordCounterForm = controller.WordCounterForm();
-            Assert.IsInstanceOfType(wordCounterForm, typeof(ViewResult));
+            ActionResult formView = controller.WordCounterForm();
+            Assert.IsInstanceOfType(formView, typeof(ViewResult));
+
         }
     }
 }
