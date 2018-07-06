@@ -21,4 +21,10 @@
     <Folder Include="Models\" />
     <Folder Include="Views\WordCounter\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\styles.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\styles.css" />
+  </ItemGroup>
 </Project>

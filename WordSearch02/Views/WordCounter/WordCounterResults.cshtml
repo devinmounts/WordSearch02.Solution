@@ -1,6 +1,31 @@
 ﻿@{
-  Layout = "_Layout";
+    Layout = "_Layout";
 }
+<div class="container">
+    <div class="jumbotron">
+        <h2 class='fancy-shadow'>Thank you for using the word search.</h2>
+        <h3 class='fancy-shadow'>Your searched word: @Model.GetTargetWord() returned @Model.GetResult() matches.</h4>
+        </h3>
+        <a href="/counter-form"><button type='button' class='btn btn-lg btn-info'>Search for another word</a>
+    </div>
+    <div class="word-history">
+        <h2 class='fancy-shadow'>Search History:</h2>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item fancy-shadow">Searched Word</div>
+        <div class="grid-item fancy-shadow">Searched Phrase</div>
+        <div class="grid-item fancy-shadow">Result</div>
+    
+        @*@foreach(var package in Model)
+        {
+        <div class="grid-item">@package.GetSender()</div>
+        <div class="grid-item">₪@package.GetCost() Hryvnias</div>
+        <div class="grid-item">@package.GetLength() cm</div>
+        <div class="grid-item">@package.GetWidth() cm</div>
+        <div class="grid-item">@package.GetHeight() cm</div>
+        <div class="grid-item">@package.GetWeight() grams</div>
+        }*@
+    </div>
+</div>
 
-<h4>Your searched word: @Model.GetTargetWord(), returned instances.</h4>
 
