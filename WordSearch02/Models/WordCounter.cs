@@ -10,6 +10,8 @@ namespace WordSearch02.Models
         private string _targetWord;
         private string[] _comparePhrase;
         private static List<RepeatCounter> _searchedWords = new List<RepeatCounter> { };
+        private static List<RepeatCounter> _searchedPhrases = new List<RepeatCounter> { };
+
 
         //Create Default and Overloaded Constructors.
         public RepeatCounter()
@@ -56,7 +58,7 @@ namespace WordSearch02.Models
             _searchedWords.Add(this);
         }
 
-        public static List<RepeatCounter> GetAll()
+        public static List<RepeatCounter> GetAllWords()
         {
             return _searchedWords;
         }
@@ -64,6 +66,21 @@ namespace WordSearch02.Models
         public static void ClearAll()
         {
             _searchedWords.Clear();
+        }
+
+        public void SavePhrase(string phrase)
+        {
+            _searchedPhrases.Add(this);
+        }
+
+        public static List<RepeatCounter> GetAllPhrases()
+        {
+            return _searchedPhrases;
+        }
+
+        public static void ClearAllPhrases()
+        {
+            _searchedPhrases.Clear();
         }
 
 
