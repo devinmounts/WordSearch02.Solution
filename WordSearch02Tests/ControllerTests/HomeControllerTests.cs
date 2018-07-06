@@ -8,12 +8,19 @@ using WordCounter.Models;
 namespace WordCounterTests.ControllerTests
 {
     [TestClass]
-    public class HomeControllerTests : IDisposable
+    public class HomeControllerTests 
     {
-        public void Dispose()
+        //public void Dispose()
+        //{
+        //    RepeatCounter.ClearAll();
+        //}
+        [TestMethod]
+        public void Splash_ReturnsCorrectView_True()
         {
-            RepeatCounter.ClearAll();
+            HomeController controller = new HomeController();
+            ActionResult splashView = controller.Splash();
+            Assert.IsInstanceOfType(splashView, typeof(ViewResult));
+
         }
-    
     }
 }
