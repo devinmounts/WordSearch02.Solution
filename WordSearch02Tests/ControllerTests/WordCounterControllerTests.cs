@@ -8,8 +8,12 @@ using WordSearch02.Models;
 namespace WordSearch02Tests.ControllerTests
 {
     [TestClass]
-    public class WordCounterControllerTests
+    public class WordCounterControllerTests : IDisposable
     {
+        public void Dispose()
+        {
+            RepeatCounter.ClearAll();
+        }
         [TestMethod]
         public void WordCounterForm_ReturnsCorrectView_True()
         {

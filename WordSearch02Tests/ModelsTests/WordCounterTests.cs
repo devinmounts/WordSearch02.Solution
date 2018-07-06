@@ -6,8 +6,12 @@ using WordSearch02.Models;
 namespace WordSearch02.Tests
 {
     [TestClass]
-    public class RepeatCounterTests
+    public class RepeatCounterTests : IDisposable
     {
+        public void Dispose()
+        {
+            RepeatCounter.ClearAll();
+        }
         [TestMethod]
         public void GetSetTargetWord_ReturnTargetWord_String()
         {

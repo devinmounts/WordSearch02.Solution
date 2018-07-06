@@ -61,6 +61,11 @@ namespace WordSearch02.Models
             return _searchedWords;
         }
 
+        public static void ClearAll()
+        {
+            _searchedWords.Clear();
+        }
+
 
         //Check if split phrase has instances of target word.
         public int CheckSplitPhrase(string targetWord, string targetPhrase)
