@@ -14,6 +14,7 @@ namespace WordSearch02Tests.ControllerTests
         {
             RepeatCounter.ClearAll();
         }
+
         [TestMethod]
         public void WordCounterForm_ReturnsCorrectView_True()
         {

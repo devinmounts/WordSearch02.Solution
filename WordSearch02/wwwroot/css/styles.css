@@ -78,7 +78,7 @@ a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto;
     background-color: #3d0f0a;
     padding: 10px;
 }

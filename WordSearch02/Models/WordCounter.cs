@@ -9,8 +9,7 @@ namespace WordSearch02.Models
         private int _result;
         private string _targetWord;
         private string[] _comparePhrase;
-        private static List<RepeatCounter> _searchedWords = new List<RepeatCounter> { };
-        private static List<RepeatCounter> _searchedPhrases = new List<RepeatCounter> { };
+        private static List<RepeatCounter> _searches = new List<RepeatCounter> { };
 
 
         //Create Default and Overloaded Constructors.
@@ -53,36 +52,21 @@ namespace WordSearch02.Models
             return _comparePhrase;
         }
 
-        public void SaveWord(string word)
+        //Save instance of object to list
+        public void Save()
         {
-            _searchedWords.Add(this);
+            _searches.Add(this);
         }
 
-        public static List<RepeatCounter> GetAllWords()
+        public static List<RepeatCounter> GetAll()
         {
-            return _searchedWords;
+            return _searches;
         }
 
         public static void ClearAll()
         {
-            _searchedWords.Clear();
+            _searches.Clear();
         }
-
-        public void SavePhrase(string phrase)
-        {
-            _searchedPhrases.Add(this);
-        }
-
-        public static List<RepeatCounter> GetAllPhrases()
-        {
-            return _searchedPhrases;
-        }
-
-        public static void ClearAllPhrases()
-        {
-            _searchedPhrases.Clear();
-        }
-
 
         //Check if split phrase has instances of target word.
         public int CheckSplitPhrase(string targetWord, string targetPhrase)

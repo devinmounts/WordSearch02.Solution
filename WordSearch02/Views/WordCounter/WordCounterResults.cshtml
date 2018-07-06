@@ -4,8 +4,7 @@
 <div class="container">
     <div class="jumbotron">
         <h2 class='fancy-shadow'>Thank you for using the word search.</h2>
-        <h3 class='fancy-shadow'>Your searched word: @Model.GetTargetWord() returned @Model.GetResult() matches.</h4>
-        </h3>
+        <h3 class='fancy-shadow'>Your searched word: @Model[@Model.Count - 1].GetTargetWord() returned @Model[Model.Count-1].GetResult() matches.</h3>
         <a href="/counter-form"><button type='button' class='btn btn-lg btn-info'>Search for another word</a>
     </div>
     <div class="word-history">
@@ -13,18 +12,13 @@
     </div>
     <div class="grid-container">
         <div class="grid-item fancy-shadow">Searched Word</div>
-        <div class="grid-item fancy-shadow">Searched Phrase</div>
         <div class="grid-item fancy-shadow">Result</div>
     
-        @*@foreach(var package in Model)
+        @foreach(var search in Model)
         {
-        <div class="grid-item">@package.GetSender()</div>
-        <div class="grid-item">₪@package.GetCost() Hryvnias</div>
-        <div class="grid-item">@package.GetLength() cm</div>
-        <div class="grid-item">@package.GetWidth() cm</div>
-        <div class="grid-item">@package.GetHeight() cm</div>
-        <div class="grid-item">@package.GetWeight() grams</div>
-        }*@
+        <div class="grid-item">@search.GetTargetWord()</div>
+        <div class="grid-item">@search.GetResult()</div>
+        }
     </div>
 </div>
 

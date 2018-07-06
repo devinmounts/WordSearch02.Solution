@@ -21,9 +21,9 @@ namespace WordSearch02.Controllers
         {
             RepeatCounter counter = new RepeatCounter();
             counter.RunCounter(word, phrase);
-            counter.SaveWord(word);
+            counter.Save();
 
-            return View(counter);
+            return View(RepeatCounter.GetAll());
         }
     }
 }
