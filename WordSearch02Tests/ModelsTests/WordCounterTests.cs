@@ -136,7 +136,7 @@ namespace WordSearch02.Tests
         }
 
         [TestMethod]
-        public void SavesGetsList_SavesReturnsList_List()
+        public void SavesGetsListOfWords_SavesReturnsListOfWords_List()
         {
             string testWord01 = "cat";
             string testWord02 = "dog";
@@ -145,7 +145,21 @@ namespace WordSearch02.Tests
             save01.SaveWord(testWord01);
             save02.SaveWord(testWord02);
             List<RepeatCounter> testList = new List<RepeatCounter> { save01, save02 };
-            CollectionAssert.AreEqual(testList, RepeatCounter.GetAll());
+            CollectionAssert.AreEqual(testList, RepeatCounter.GetAllWords());
+
+        }
+
+        [TestMethod]
+        public void SavesGetsListOfPhrases_SavesReturnsListofPhrases_List()
+        {
+            string testPhrase01 = "the cat";
+            string testPhrase02 = "the dog";
+            RepeatCounter save01 = new RepeatCounter();
+            RepeatCounter save02 = new RepeatCounter();
+            save01.SavePhrase(testPhrase01);
+            save02.SavePhrase(testPhrase02);
+            List<RepeatCounter> testList = new List<RepeatCounter> { save01, save02 };
+            CollectionAssert.AreEqual(testList, RepeatCounter.GetAllPhrases());
 
         }
 
