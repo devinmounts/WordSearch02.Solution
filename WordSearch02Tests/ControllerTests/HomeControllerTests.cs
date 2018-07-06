@@ -1,10 +1,19 @@
-﻿using System;
-namespace WordSearch02Tests.ControllerTests
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using WordCounter.Controllers;
+using WordCounter.Models;
+
+namespace WordCounterTests.ControllerTests
 {
-    public class HomeControllerTests
+    [TestClass]
+    public class HomeControllerTests : IDisposable
     {
-        public HomeControllerTests()
+        public void Dispose()
         {
+            RepeatCounter.ClearAll();
         }
+    
     }
 }

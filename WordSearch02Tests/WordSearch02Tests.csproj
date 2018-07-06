@@ -16,4 +16,7 @@
     <Folder Include="ModelsTests\" />
     <Folder Include="ControllerTests\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WordSearch02\WordSearch02.csproj" />
+  </ItemGroup>
 </Project>
