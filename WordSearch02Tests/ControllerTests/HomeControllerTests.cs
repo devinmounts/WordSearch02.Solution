@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using WordCounter.Controllers;
-using WordCounter.Models;
+using WordSearch02.Controllers;
+using WordSearch02.Models;
 
-namespace WordCounterTests.ControllerTests
+namespace WordSearch02Tests.ControllerTests
 {
     [TestClass]
     public class HomeControllerTests 

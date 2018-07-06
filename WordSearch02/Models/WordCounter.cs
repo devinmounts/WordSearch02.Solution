@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WordCounter.Models
+namespace WordSearch02.Models
 {
     public class RepeatCounter
     {

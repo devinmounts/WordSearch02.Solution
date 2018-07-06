@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using WordCounter.Models;
+using WordSearch02.Models;
 
-namespace WordCounter.Tests
+namespace WordSearch02.Tests
 {
     [TestClass]
     public class RepeatCounterTests
