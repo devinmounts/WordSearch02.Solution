@@ -3,9 +3,26 @@
 }
 
 <div class="container">
-    <div class=" = jumbotron">
+    <div class="jumbotron">
         <h1>You have entered the Repeat Counter Game!</h1>
-        <p>First, enter a word. Then, enter a phrase to see how many time your chosen word appears</p>
+    </div>
+    <div class='panel panel-default'>
+        <div class='panel-heading'>
+            <h4>First, enter a word. Then, enter a phrase to see how many time your chosen word appears</h4>
+        </div>
+        <div class='panel-body'>
+            <form id='counter-form' action='/counter_results' method='post'>
+                <div class='form-group'>
+                    <label for='targetWord'>Enter a word to search for.</label>
+                    <input type='text' name='targetWord' id='inputWord' class='form-control' autocomplete="off" required>
+                </div>
+                <div class='form-group'>
+                    <label for='phrase'>Enter a phrase to search through.</label>
+                    <input type='text' name='phrase' id='inputWeight' class='form-control' autocomplete="off" required>
+                </div>
+                <button type='submit' name='button' id='submit-form' class='btn btn-lg btn-info'>Enter</button>
+            </form>
+        </div>
     </div>
 
 </div>
