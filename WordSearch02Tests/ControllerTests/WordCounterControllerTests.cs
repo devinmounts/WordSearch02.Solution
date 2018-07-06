@@ -25,5 +25,13 @@ namespace WordSearch02Tests.ControllerTests
             ActionResult resultsView = controller.WordCounterResults("cat", "the cAt");
             Assert.IsInstanceOfType(resultsView, typeof(ViewResult));
         }
+
+        [TestMethod]
+        public void WordCounterResults_HasCorrectModelType_RepeatCounter()
+        {
+            ViewResult wordCounterResultsView = new WordCounterController().WordCounterResults("cat", "the CaT") as ViewResult;
+            var result = wordCounterResultsView.ViewData.Model;
+            Assert.IsInstanceOfType(result, typeof(RepeatCounter));
+        }
     }
 }

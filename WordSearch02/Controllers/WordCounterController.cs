@@ -25,6 +25,7 @@ namespace WordSearch02.Controllers
             counter.GetResult();
 
             return View(counter);
+            //return new EmptyResult();
         }
     }
 }

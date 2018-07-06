@@ -89,6 +89,5 @@ namespace WordSearch02.Models
             CheckSplitPhrase(word, phrase);
             return GetResult();
         }
-
     }
 }
