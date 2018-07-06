@@ -41,6 +41,7 @@ namespace WordSearch02.Models
         }
 
         //Set and Get Phrase to compare with target word.
+
         public void SetSplitCompareString(string newComparePhrase)
         {
             char[] splitChars = { ' ', '.', ',', '!', '?', '-', '_', '#', '@', ':', ';', '(', ')', '*', '<', '>' };
@@ -69,22 +70,22 @@ namespace WordSearch02.Models
         }
 
         //Check if split phrase has instances of target word.
-        public int CheckSplitPhrase(string targetWord, string targetPhrase)
+        public int CheckSplitPhrase()
         {
-            SetTargetWord(targetWord);
-            string inputWord = GetTargetWord();
-            SetSplitCompareString(targetPhrase);
-            string[] inputPhrase = GetComparePhrase();
-            if (!inputPhrase.Contains(inputWord))
+            //SetTargetWord(targetWord);
+            //string inputWord = GetTargetWord();
+            //SetSplitCompareString(targetPhrase);
+            //string[] inputPhrase = GetComparePhrase();
+            if (!_comparePhrase.Contains(_targetWord))
             {
                 return _result = 0;
             }
             else
             {
                 int i = 0;
-                foreach (string word in inputPhrase)
+                foreach (string word in _comparePhrase)
                 {
-                    if (inputWord == inputPhrase[i])
+                    if (_targetWord == _comparePhrase[i])
                     {
                         _result += 1;
                     }
@@ -101,9 +102,9 @@ namespace WordSearch02.Models
         }
 
         //Run Repeat Counter
-        public int RunCounter(string word, string phrase)
+        public int RunCounter()
         {
-            CheckSplitPhrase(word, phrase);
+            CheckSplitPhrase();
             return GetResult();
         }
     }

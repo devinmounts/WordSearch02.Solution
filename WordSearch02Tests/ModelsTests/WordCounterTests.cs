@@ -81,9 +81,10 @@ namespace WordSearch02.Tests
             string testWord = "The";
             string testPhrase = "The Cat walked down THe street to THE store.";
             RepeatCounter testCounter = new RepeatCounter();
-
+            testCounter.SetTargetWord(testWord);
+            testCounter.SetSplitCompareString(testPhrase);
             //Act
-            int result = testCounter.CheckSplitPhrase(testWord, testPhrase);
+            int result = testCounter.CheckSplitPhrase();
 
             //Assert
             Assert.AreEqual(3, result);
@@ -96,9 +97,11 @@ namespace WordSearch02.Tests
             string testWord = "The";
             string testPhrase = "The Cat walked down THe street to THE store.";
             RepeatCounter testCounter = new RepeatCounter();
+            testCounter.SetTargetWord(testWord);
+            testCounter.SetSplitCompareString(testPhrase);
 
             //Act
-            testCounter.CheckSplitPhrase(testWord, testPhrase);
+            testCounter.CheckSplitPhrase();
             int result = testCounter.GetResult();
 
             //Assert
@@ -112,9 +115,12 @@ namespace WordSearch02.Tests
             string testWord = "The";
             string testPhrase = "The Cat walked down THe street to THE store.";
             RepeatCounter testCounter = new RepeatCounter();
+            testCounter.SetTargetWord(testWord);
+            testCounter.SetSplitCompareString(testPhrase);
+            //Act
 
             //Act
-            int result = testCounter.RunCounter(testWord, testPhrase);
+            int result = testCounter.RunCounter();
 
             //Assert
             Assert.AreEqual(3, result);
@@ -127,9 +133,11 @@ namespace WordSearch02.Tests
             string testWord = "the";
             string testPhrase = "The,!! #cat@()cat (the),.the?CAT!";
             RepeatCounter testCounter = new RepeatCounter();
+            testCounter.SetTargetWord(testWord);
+            testCounter.SetSplitCompareString(testPhrase);
 
             //Act
-            int result = testCounter.RunCounter(testWord, testPhrase);
+            int result = testCounter.RunCounter();
 
             //Assert
             Assert.AreEqual(3, result);
@@ -140,10 +148,10 @@ namespace WordSearch02.Tests
         {
             string test01 = "cat";
             string test02 = "dog";
-            RepeatCounter save01 = new RepeatCounter();
-            RepeatCounter save02 = new RepeatCounter();
-            save01.SaveWord(test01);
-            save02.SaveWord(test02);
+            RepeatCounter save01 = new RepeatCounter(test01);
+            RepeatCounter save02 = new RepeatCounter(test02);
+            save01.Save();
+            save02.Save();
             List<RepeatCounter> testList = new List<RepeatCounter> { save01, save02 };
             CollectionAssert.AreEqual(testList, RepeatCounter.GetAll());
 

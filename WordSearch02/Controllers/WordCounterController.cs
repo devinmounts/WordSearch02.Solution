@@ -20,10 +20,13 @@ namespace WordSearch02.Controllers
         public ActionResult WordCounterResults(string word, string phrase)
         {
             RepeatCounter counter = new RepeatCounter();
-            counter.RunCounter(word, phrase);
+            counter.SetTargetWord(word);
+            counter.SetSplitCompareString(phrase);
             counter.Save();
+            counter.RunCounter();
 
-            return View(RepeatCounter.GetAll());
+
+            return View(counter);
         }
     }
 }
