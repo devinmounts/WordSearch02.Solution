@@ -26,7 +26,7 @@ namespace WordSearch02.Controllers
             counter.RunCounter();
 
 
-            return View(counter);
+            return View(RepeatCounter.GetAll());
         }
     }
 }

@@ -34,9 +34,9 @@ namespace WordSearch02Tests.ControllerTests
         [TestMethod]
         public void WordCounterResults_HasCorrectModelType_RepeatCounter()
         {
-            ViewResult wordCounterResultsView = new WordCounterController().WordCounterResults("cat", "the CaT") as ViewResult;
+            ViewResult wordCounterResultsView = new WordCounterController().WordCounterResults("cat", "the cat") as ViewResult;
             var result = wordCounterResultsView.ViewData.Model;
-            Assert.IsInstanceOfType(result, typeof(RepeatCounter));
+            Assert.IsInstanceOfType(result, typeof(List<RepeatCounter>));
         }
     }
 }
