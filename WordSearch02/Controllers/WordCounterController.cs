@@ -25,8 +25,10 @@ namespace WordSearch02.Controllers
             counter.Save();
             counter.RunCounter();
 
-
-            return View(RepeatCounter.GetAll());
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("repeatCounter", RepeatCounter.GetAll());
+            model.Add("phrase", phrase);
+            return View(model);
         }
     }
 }

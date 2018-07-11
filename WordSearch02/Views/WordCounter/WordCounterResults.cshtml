@@ -4,7 +4,7 @@
 <div class="container">
     <div class="jumbotron">
         <h2 class='fancy-shadow'>Thank you for using the word counter.</h2>
-        <h3 class='fancy-shadow'>Your searched word: @Model[@Model.Count - 1].GetTargetWord() returned @Model[Model.Count-1].GetResult() matches.</h3>
+        <h3 class='fancy-shadow'>Your searched word: @Model["repeatCounter"][@Model["repeatCounter"].Count - 1].GetTargetWord() returned @Model["repeatCounter"][Model["repeatCounter"].Count-1].GetResult() matches.</h3>
         <a href="/counter-form"><button type='button' class='btn btn-lg btn-info'>Search for another word</a>
     </div>
     <div class="word-history">
@@ -13,13 +13,11 @@
     <div class="grid-container">
         <div class="grid-item fancy-shadow">Searched Word</div>
         <div class="grid-item fancy-shadow">Result</div>
-    
-        @foreach(var search in Model)
+
+        @foreach(var search in Model["repeatCounter"])
         {
         <div class="grid-item">@search.GetTargetWord()</div>
-        <div class="grid-item">@search.GetResult()</div>
+        <div class="grid-item">@search.GetResult() @Model["phrase"]</div>
         }
     </div>
 </div>
-
-
